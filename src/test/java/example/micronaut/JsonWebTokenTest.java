@@ -3,8 +3,8 @@ package example.micronaut;
 import com.nimbusds.jwt.EncryptedJWT;
 import com.nimbusds.jwt.JWTParser;
 import io.micronaut.security.authentication.Authentication;
-import io.micronaut.security.token.generator.AccessTokenConfiguration;
 import io.micronaut.security.token.generator.TokenGenerator;
+import io.micronaut.security.token.jwt.generator.AccessTokenConfiguration;
 import io.micronaut.security.token.validator.TokenValidator;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
@@ -23,7 +23,7 @@ class JsonWebTokenTest {
     TokenGenerator tokenGenerator;
 
     @Inject
-    TokenValidator<?> tokenValidator;
+    TokenValidator tokenValidator;
 
     @Inject
     AccessTokenConfiguration accessTokenConfiguration;

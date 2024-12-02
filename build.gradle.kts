@@ -23,15 +23,12 @@ dependencies {
 
 
 application {
-    mainClass = "example.micronaut.Application"
+    mainClass.set("example.micronaut.Application")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
     targetCompatibility = JavaVersion.toVersion("17")
 }
-
-
-graalvmNative.toolchainDetection = false
 
 micronaut {
     runtime("netty")
@@ -42,8 +39,5 @@ micronaut {
     }
 }
 
-tasks.named<io.micronaut.gradle.docker.NativeImageDockerfile>("dockerfileNative") {
-    jdkVersion = "21"
-}
 
 
